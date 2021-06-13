@@ -14,5 +14,5 @@ class Estudiante extends Model
 
     ];
 
-    protected $primaryKey='id_producto';
+    protected $primaryKey='id_estudiante';
 }

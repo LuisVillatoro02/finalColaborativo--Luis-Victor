@@ -67,10 +67,14 @@ class EstudianteController extends Controller
     public function showEstudiante(){
 
 
-        $estudiante=DB::table('estudiante')->where('nombre_estudiante','LIKE','%'.'%')
+
+        $estudiante=DB::table('estudiante as e')
+            ->join('genero as q','e.id_genero','=','q.id_genero')
+            ->select('e.id_estudiante','e.nombre_estudiante','e.apellido_estudiante','e.fecha_nacimiento_estudiante','e.edad_estudiante','e.grado_estudiante','e.seccion_estudiante','e.ciclo_escolar_estudiante','q.tipo_genero')
+            ->where('e.nombre_estudiante','LIKE','%'.'%')
             ->orderBy('nombre_estudiante','asc')
             ->paginate(7);
-        return view('listaDeEstudiantes', compact('estudiante'));
+        return view('listaDeEstudiante', compact('estudiante'));
     }
 
     public function saveEstudiante(Request $request){

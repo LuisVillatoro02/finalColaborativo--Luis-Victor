@@ -57,8 +57,8 @@ class GeneroController extends Controller
     public function showGenero(){
 
 
-        $genero=DB::table('genero')->where('tipo_huesped','LIKE','%'.'%')
-            ->orderBy('tipo_huesped','asc')
+        $genero=DB::table('genero')->where('tipo_genero','LIKE','%'.'%')
+            ->orderBy('tipo_genero','asc')
             ->paginate(7);
         return view('listaDeGeneros', compact('genero'));
     }
