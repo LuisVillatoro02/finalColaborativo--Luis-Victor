@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EstudianteFormRequest;
 use App\Models\Estudiante;
+use App\Models\Genero;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -59,9 +60,8 @@ class EstudianteController extends Controller
 
 
     public function registerEstudiante(){
-
-
-        return view('registrarEstudiante');
+        $genero=Genero::all();
+        return view('registrarEstudiante', compact('genero'));
     }
 
     public function showEstudiante(){

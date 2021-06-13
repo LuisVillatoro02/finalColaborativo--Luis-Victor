@@ -7,7 +7,7 @@
             <a href="{{url('/generos/index')}}" class="btn btn-success">Añadir un nuevo Genero</a>
         </div>
         <div class="table-responsive">
-            <table class="table table-warning table-striped">
+            <table class="table table-info table-striped">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>

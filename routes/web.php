@@ -23,6 +23,7 @@ Route::get('/estudiantes/lista', [\App\Http\Controllers\EstudianteController::cl
 Route::get('/estudiantes/edit/{id}',[\App\Http\Controllers\EstudianteController::class,'edit'])->name('estudiante.editEstudiante');
 Route::post('/estudiantes/update/{id}',[\App\Http\Controllers\EstudianteController::class,'update'])->name('estudiante.updateEstudiante');
 Route::get('/estudiantes/delete/{id}',[\App\Http\Controllers\EstudianteController::class,'deleteEstudiante'])->name('estudiante.deleteEstudiante');
+
 Route::get('/generos/index', [\App\Http\Controllers\GeneroController::class, 'registerGenero'])->name('genero.index');
 Route::post('/generos/registrar', [\App\Http\Controllers\GeneroController::class, 'saveGenero'])->name('genero.registrarGenero');
 Route::get('/generos/lista', [\App\Http\Controllers\GeneroController::class, 'showGenero'])->name('genero.listarGenero');

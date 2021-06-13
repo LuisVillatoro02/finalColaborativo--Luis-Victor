@@ -1,13 +1,14 @@
 @extends('layouts.plantilla')
-
+@extends('layouts.plantilla2')
+@section('titulo', 'Listado de Estudiante')
 @section('contenido')
     <div class="p-3 bg-white mb-3">
-        <h3>Lista de Huespedes</h3>
+        <h3>Lista de Estudiantes</h3>
         <div class="input-group mb-3">
             <a href="{{url('/estudiantes/index')}}" class="btn btn-success">Añadir un nuevo Estudiante</a>
         </div>
         <div class="table-responsive">
-            <table class="table table-warning table-striped">
+            <table class="table table-info table-striped">
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
